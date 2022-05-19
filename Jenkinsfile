@@ -15,10 +15,16 @@ pipeline {
             }
         }
          stage('deploy') {
-     steps {
-            sh 'docker rm -f nodejs '
-            sh 'docker run -p 3000:3000 -d --name nodejs mahmoudshaaban5/jenkins_iti:latest'
-     }
-    }
+             steps {
+                    sh 'docker rm -f nodejs '
+                    sh 'docker run -p 3000:3000 -d --name nodejs mahmoudshaaban5/jenkins_iti:latest'
+             }
+         }
+            post {
+                success {
+                    slackSend color: "#439FE0", message: ""Build deployed successfully"
+                }
+            }
+        
     }
 }
