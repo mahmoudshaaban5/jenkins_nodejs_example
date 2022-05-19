@@ -1,4 +1,4 @@
-ine {
+pipeline {
     agent any
     stages {
         stage('Build') { 
@@ -26,7 +26,7 @@ ine {
                     slackSend (color: "#439FE0", message: "Build deployed successfully")
                 }
                 failure {
-                    slackSend (color: "#439FE0", message: "Build deployed Not successfully")
+                    slackSend color: "#439FE0", message: "Build deployed Not successfully"
                 }
             }
         
