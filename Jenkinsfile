@@ -21,9 +21,6 @@ pipeline {
             }
         }
         post{
-              success {
-                    slackSend (color:"#439FE0", message: "Build deployed successfully")
-                }
               
             }
         
