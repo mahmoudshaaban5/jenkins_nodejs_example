@@ -23,10 +23,10 @@ ine {
     }
         post{
                 success {
-                    slackSend color: ("#439FE0", message: "Build deployed successfully")
+                    slackSend (color: "#439FE0", message: "Build deployed successfully")
                 }
                 failure {
-                    slackSend color: "#439FE0", message: "Build deployed Not successfully"
+                    slackSend (color: "#439FE0", message: "Build deployed Not successfully")
                 }
             }
         
