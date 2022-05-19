@@ -23,7 +23,7 @@ pipeline {
     }
         post{
                 success {
-                    slackSend (color: "#439FE0", message: "Build deployed successfully")
+                    slackSend (color: "#439FE0", message: "The pipeline ${currentBuild.fullDisplayName} completed successfully.")
                 }
                 failure {
                     slackSend color: "#439FE0", message: "Build deployed Not successfully"
