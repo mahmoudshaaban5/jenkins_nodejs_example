@@ -20,9 +20,6 @@ pipeline {
                     sh 'docker run -p 3000:3000 -d --name nodejs mahmoudshaaban5/jenkins_iti:latest'
             }
         }
-        post{
-              
-            }
         
     }
 }
